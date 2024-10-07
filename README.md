@@ -1,4 +1,4 @@
-Client
+## Client
 The client folder contains the frontend code, built with React.js. It handles the user interface, including property listings, user registration, login, and search functionality.
 
 API
