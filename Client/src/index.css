@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(241, 245, 241);
+}
+
+.shapes {
+    width: 44.8px;
+    height: 22.4px;
+    background: #577085;
+    position: relative;
+    animation: shapes-9nkw4omd 1.5s infinite linear;
+    
+ }
+ 
+ .shapes:before,
+ .shapes:after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    bottom: 100%;
+    width: 50%;
+    height: 100%;
+    animation: inherit;
+    animation-name: shapes-r89hlomd;
+ }
+ 
+ .shapes:before {
+    left: 0;
+    --s: -1,1;
+ }
+ 
+ .shapes:after {
+    right: 0;
+ }
+ 
+ @keyframes shapes-9nkw4omd {
+    0%, 30% {
+       transform: translateY(0)     scaleY(1);
+    }
+ 
+    49.99% {
+       transform: translateY(-50%)  scaleY(1);
+    }
+ 
+    50% {
+       transform: translateY(-50%)  scaleY(-1);
+    }
+ 
+    70%, 100% {
+       transform: translateY(-100%) scaleY(-1);
+    }
+ }
+ 
+ @keyframes shapes-r89hlomd {
+    0%, 10%, 90%, 100% {
+       transform: scale(var(--s,1)) translate(0);
+    }
+ 
+    30%, 70% {
+       transform: scale(var(--s,1)) translate(22.4px);
+    }
+ 
+    50% {
+       transform: scale(var(--s,1)) translate(22.4px,22.4px);
+    }
+ }
